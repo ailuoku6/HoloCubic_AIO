@@ -26,6 +26,7 @@
 #include "app/screen_share/screen_share.h"
 #include "app/file_manager/file_manager.h"
 #include "app/weather_old/weather_old.h"
+#include "app/bullet_chat/bullet_chat.h"
 
 #include <SPIFFS.h>
 #include <esp32-hal.h>
@@ -92,6 +93,7 @@ void setup()
     app_controller->app_install(&bilibili_app);
     app_controller->app_install(&settings_app);
     app_controller->app_install(&game_2048_app);
+    app_controller->app_install(&bullet_chat_app);
 
     // 优先显示屏幕 加快视觉上的开机时间
     app_controller->main_process(&mpu.action_info);
