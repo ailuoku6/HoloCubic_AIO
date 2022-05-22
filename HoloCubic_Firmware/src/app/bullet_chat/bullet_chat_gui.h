@@ -1,6 +1,13 @@
 #ifndef APP_BULLET_CHAT_GUI_H
 #define APP_BULLET_CHAT_GUI_H
 
+struct BulletInfo
+{
+    int time;// 已经经历过的帧数
+    char* content;//弹幕内容
+    short trace;// 弹幕所处的泳道
+};
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -13,7 +20,7 @@ extern "C"
 
     void bullet_chat_gui_init(void);
     void display_bullet_chat_init(void);
-    void display_bullet_chat(void);
+    void display_bullet_chat(struct BulletInfo *bulletInfo,int bullet_len);
     void clear_bullet_chat(void);
 
 #ifdef __cplusplus

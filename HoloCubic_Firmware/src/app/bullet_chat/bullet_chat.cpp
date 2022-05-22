@@ -6,12 +6,21 @@
 
 #define BULLET_CHAT_APP_NAME "Bullet Chat"
 
+//  struct BulletInfo info = {
+//     100,"LURK",1
+// };
+
+
+static struct BulletInfo bulletInfo[] = {
+    {100,"LURK",1}
+};
+
 static int bullet_chat_init(void)
 {
     bullet_chat_gui_init();
 }
 
-static void bullet_chat_process(AppController *sys,const Imu_Action *act_info)
+static void bullet_chat_process(AppController *sys,const ImuAction *act_info)
 {
     lv_scr_load_anim_t anim_type = LV_SCR_LOAD_ANIM_FADE_ON;
 
@@ -21,7 +30,10 @@ static void bullet_chat_process(AppController *sys,const Imu_Action *act_info)
         return;
     }
 
-    display_bullet_chat();
+    // 遍历弹幕值，时值+1
+    bulletInfo[0].time+=1;
+
+    display_bullet_chat(bulletInfo,1);
 
     delay(30);
 }
