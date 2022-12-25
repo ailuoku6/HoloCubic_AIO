@@ -1,4 +1,7 @@
 # HoloCubic_AIO (All in one for HoloCubic)
+### _You can also read a translated version of this file [in English 英文版](https://github.com/ClimbSnail/HoloCubic_AIO/blob/main/README_English.md) or [in Korean 한국어](./README_English.md)._
+
+AIO意为All in one，目的将尽可能多的功能集成进Holocubic AIO固件中，并坚持开源。目前固件源码达`2w+`行，上位机源码`4k`行（均不含字库图片），诚邀大家共同开发AIO固件、上位机以及周边，让固件满足更多人的需求。
 
 * 原作者的项目链接 https://github.com/peng-zhihui/HoloCubic
 * 本项目的地址 https://github.com/ClimbSnail/HoloCubic_AIO （最新版本）
@@ -9,15 +12,22 @@
 * 2048游戏应用开发：[AndyXFuture](https://github.com/AndyXFuture)
 * 新版天气时钟应用开发：[PuYuuu](https://github.com/PuYuuu)
 * BiliBili粉丝应用开发：[cnzxo](https://github.com/cnzxo/)
+* 纪念日、心跳应用开发：[WoodwindHu](https://github.com/WoodwindHu)
+* PC资源监控应用开发：[Jumping99](https://github.com/Jumping99)
 * 开发人员持续加入中。。。。
 
-_**欢迎加入AIO内测QQ讨论群 755143193**_
+_**欢迎加入AIO内测QQ讨论群**_
+
+一群群号 755143193
+二群群号 860112883
+三群群号 676732387
+四群群号 749207817
 
 ![QQ_Group](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_qq_group.jpg)
 
 ### 主要特点
 1. 聚合多种APP，内置天气、时钟、相册、特效动画、视频播放、电脑投屏、web设置等等。（各APP具体使用参考说明书）
-2. 开机无论是否插接tf卡、mpu6050是否焊接正常、是否连接wifi（一定要2.4G的wifi），都不影响系统启动。
+2. 开机无论是否插接tf卡、mpu6050是否焊接正常、是否连接wifi（一定要2.4G的wifi），都不影响系统启动和屏幕显示。
 3. 程序相对模块化，低耦合。
 4. 提供web界面进行配网以及其他设置选项。注：具体操作参考`APP介绍`
 5. 提供web端连入除了支持ip访问，也支持域名直接访问 http://holocubic （部分浏览器可能支持不好）
@@ -27,25 +37,14 @@ _**欢迎加入AIO内测QQ讨论群 755143193**_
 ### 本固件设计了一套低耦合框架，更有利于多功能的实现
 B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 
-[^_^]:
-	![HomePage](Image/holocubic_1080x1080.jpg)
+![HomePage](Image/holocubic_main.jpg)
 
-![HomePage](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_1080x1080.jpg)
+![HomePage](Image/holocubic_home.png)
 
-[^_^]:
-	![HomePage](Image/holocubic_home.png)
+![UploadPage](Image/holocubic_upload.png)
 
-![HomePage](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_home.png)
+![SettingPage](Image/holocubic_setting.png)
 
-[^_^]:
-	![UploadPage](Image/holocubic_upload.png)
-
-![UploadPage](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_upload.png)
-
-[^_^]:
-	![SettingPage](Image/holocubic_setting.png)
-
-![SettingPage](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_setting.png)
 
 ### 固件刷写工具（无需搭建任何IDE环境）
 下载群中的上位机进行刷机。
@@ -62,8 +61,7 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 
 本上位机与AIO固件一样，坚持开源，开源地址：https://github.com/ClimbSnail/HoloCubic_AIO_Tool
 
-[^_^]:
-	![AIO_TOOL](Image/holocubic_aio_tool.png)
+![AIO_TOOL](Image/holocubic_aio_tool.png)
 
 ![AIO_TOOL](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_aio_tool.png)
 
@@ -73,8 +71,8 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 ### 功能切换说明：
 1. TF卡的文件系统为fat32。TF为非必须硬件，但相册、视频播放等功能需依赖与此。如果准备使用内存卡，在使用内存卡前最好将本工程中`放置到内存卡`目录里的所有文件和文件夹都放在TF卡的根目录。
 2. 插不插tf内存卡都不影响开机，但影响某些APP的功能（各自APP介绍里会说明）。
-3. 左右摇晃即可切换选择各类APP。
-4. 向前倾斜1s钟即可进入当前页的APP应用，今后还会整合更多功能，同样后仰1s即退出该APP。
+3. 左右摇晃`0.5s`即可切换选择各类APP。
+4. 向前倾斜`1s`钟即可进入当前页的APP应用，今后还会整合更多功能，同样后仰1s即退出该APP。
 
 ### APP介绍
 
@@ -84,6 +82,7 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 3. 开始使用时，应让电脑与`HoloCubic`处于同一网络环境（同网段）。如果之前没连接过wifi则需要使用电脑连接HoloCubic放出的热点名为`HoloCubic_AIO`无密码的wifi。
 4. 在浏览器地址栏输入`Local_IP`或者`AP_IP`（ http://192.168.4.2 也支持域名直接访问 http://holocubic ），即可进入管理设置后台。推荐使用`ip地址`访问。
 5. 网页里可设置系统参数、天气APP参数、相册参数、播放器参数等等。
+6. 由于当前APP数量多，切换查找比较繁琐，也可以在`Web Server`中配置`自启动APP`。
 
 ##### 文件管理器（File Manager）
 作用：通过无线网络管理内存卡上的文件。
@@ -114,7 +113,7 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 ##### 屏幕分享、电脑投屏（Screen share）
 1. 运行APP条件：无需内存卡，但需要利用`Web Server服务`app设置wifi密码（确保能连上路由器）。为避免wifi连接时，功率不够导致重启，请确保USB口供电充足。
 2. 上位机目前使用第三方软件，后期会独立编写投屏上位机，提高性能。
-3. 本投屏上位机使用的是[大大怪](https://gitee.com/superddg123/esp32-TFT/tree/master)的上位机。
+3. 本投屏上位机使用的是[大大怪](https://gitee.com/superddg123/esp32-TFT/tree/master)的上位机，如果画面卡顿可以降低画质来提升帧数。
 4. `WebServer`的网页端可以进行附加功能的设置。
 
 ##### 天气、时钟（Weather）
@@ -127,7 +126,7 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 1. 旧版UI设计模仿了[CWEIB](https://github.com/CWEIB)
 2. 运行APP条件：必须是已经联网状态，且设置好地点、weather_key。不插内存卡大多数情况能正常工作。
 3. 一般情况下不插内存卡也可以工作，但部分天气图标是存在内存卡中（由于内部flash不够用）的，需要将固件附带的`weather/`文件夹复制到tf卡根目录。
-4. 使用旧版天气时钟，需要再"Web Server"网页服务中修改知心天气的`知心天气 城市名`、`key（私钥）`。（申请地址 https://seniverse.com 。程序默认使用的是v3版本的api）
+4. 使用旧版天气时钟，需要再"Web Server"网页服务中修改心知天气的`心知天气 城市名`、`key（私钥）`。（申请地址 https://seniverse.com 。程序默认使用的是v3版本的api）
 
 注：即使断网后，时钟也依旧运行。（开机最好连接wifi，这样会自动同步时钟。使用中会间歇尝试同步时钟）
 
@@ -149,13 +148,40 @@ B站功能操作演示视频链接 https://www.bilibili.com/video/BV1wS4y1R7YF/
 
 注：程序由`cnzxo`编写。
 
+##### 纪念日（Anniversary）
+1. 运行APP条件：联网状态
+2. 第一次使用之前，要先在`WebServer App`的网页上填写纪念日名称和日期，目前可以设置两个纪念日。纪念日支持的字有`生日还有毕业养小恐龙种土豆老婆女朋友爸妈爷奶弟妹兄姐结婚纪念`，如果纪念日名称包含的字不在这个范围内，请自行生成字体文件并替换`src\app\anniversary\msyhbd_24.c`文件。日期格式如`2022.5.8`，如果年份设置为0，则被认为是每年重复的纪念日（如生日）。
+
+注：纪念日和心跳都复现自[LizCubic](https://github.com/qingehao/LizCubic)项目。程序由`WoodwindHu`编写
+
+##### 心跳（Heartbeat）
+1. 运行APP条件：联网状态（需要开启性能模式），一个开放1883端口的mqtt服务器，两个HoloCubic。
+2. 第一次使用之前，要先在`WebServer App`的网页上填写配置。role可以选择0和1，分别代表互动的两个HoloCubic。client_id为设备的唯一标识，这里请将这两个Holocubic设置成同一个QQ号。mqtt_server填写自己的mqtt服务器地址,port填写端口号。用户名以及密码根据具体的服务器配置而定。
+3. 设置完心跳APP之后，开机自动联网，并开启mqtt客户端。收到另一个HoloCubic的消息之后自动进入APP。正常方式进入APP则自动向另一个HoloCubic发送消息。
+4. 群内不定时更新免费的服务，具体配置参数可以问管理或者群友。
+
+注：纪念日和心跳都复现自[LizCubic](https://github.com/qingehao/LizCubic)项目。程序由`WoodwindHu`编写
+
+##### 股票行情实时查看（Stock）
+1. 运行APP条件：必须是已经正常配置wifi。为避免wifi连接时，功率不够导致重启，请确保USB口供电充足。
+2. 第一次使用之前，要先在`WebServer App`的网页上修改自己想要的`股票代码`。
+
+注：程序由`redwolf`编写
+
+##### PC资源监控(PC Resource)
+1. 运行条件: 必须是已经正常配置wifi。PC端与HoloCubic处于同一网段，在`WebServer APP`中这只PC的服务IP地址（具体看教程）。
+2. 下载[AIDA64](https://www.aida64.com/downloads)，PC安装AIDA64后的导入配置文件`aida64_setting.rslcd`（在`AIO_Firmware_PIO\src\app\pc_resource`目录下或者群文件中）
+
+注：具体操作步骤较长，见群文档。本应用由`Jumping99`开发。
+
 ### 关于编译工程代码
 1. 本工程代码是基于vscode上的PlatformIO插件中的ESP32-Pico的Arduino平台开发。具体教程可以上`B站`找。推荐教程[https://b23.tv/kibhGD](https://b23.tv/kibhGD)
 2. 记得修改工程下`platformio.ini`文件中`upload_port`字段成对应自己COMM口。
-3. 目前最新版本已经不需要大家特意修改SPI库中的SPI引脚了，本工程的`lib`下单独放置了一个已经修改好了SPI引脚的SPI库。以下是此前版本的操作（可忽略）
+3. 如果希望屏蔽掉内置的部分文件，请在`AIO_Firmware_PIO\src\app\app_conf.h`中对应的`APP宏`修改为`0`即可屏蔽。
+4. 目前最新版本已经不需要大家特意修改SPI库中的SPI引脚了，本工程的`lib`下单独放置了一个已经修改好了SPI引脚的SPI库。以下是此前版本的操作（可忽略）
 
-然后这里需要修改一个官方库文件才能正常使用(不然会导致内存卡读取失败)：
-PlatformIO和ArduinoIDE用户都需安装ESP32的Arduino固件支持包（百度有海量教程）。不管哪种开发方式都需要修改`SPI`库中的`MISO`默认引脚为`26`，例如arduinoIDE的包路径为`esp32\hardware\esp32\1.0.4\libraries\SPI\src\SPI.cpp`文件中，**修改以下代码中的MISO为26**：
+~~然后这里需要修改一个官方库文件才能正常使用(不然会导致内存卡读取失败)：
+PlatformIO和ArduinoIDE用户都需安装ESP32的Arduino固件支持包（百度有海量教程）。不管哪种开发方式都需要修改`SPI`库中的`MISO`默认引脚为`26`，例如arduinoIDE的包路径为`esp32\hardware\esp32\1.0.4\libraries\SPI\src\SPI.cpp`文件中，**修改以下代码中的MISO为26**：~~
 ```
     if(sck == -1 && miso == -1 && mosi == -1 && ss == -1) {
         _sck = (_spi_num == VSPI) ? SCK : 14;
@@ -163,12 +189,11 @@ PlatformIO和ArduinoIDE用户都需安装ESP32的Arduino固件支持包（百度
         _mosi = (_spi_num == VSPI) ? MOSI : 13;
         _ss = (_spi_num == VSPI) ? SS : 15;
 ```
-这是因为，硬件上连接屏幕和SD卡分别是用两个硬件SPI，其中HSPI的默认MISO引脚是12，而12在ESP32中是用于上电时设置flash电平的，上电之前上拉会导致芯片无法启动，因此我们将默认的引脚替换为26。
+~~这是因为，硬件上连接屏幕和SD卡分别是用两个硬件SPI，其中HSPI的默认MISO引脚是12，而12在ESP32中是用于上电时设置flash电平的，上电之前上拉会导致芯片无法启动，因此我们将默认的引脚替换为26。~~
 
 ### 程序框架图
 
-[^_^]:
-	![HoloCubic_AIO_Frame](Image/holocubic_AIO_Frame.png)
+![HoloCubic_AIO_Frame](Image/holocubic_AIO_Frame.png)
 
 ![HoloCubic_AIO_Frame](https://gitee.com/ClimbSnailQ/Project_Image/raw/master/OtherProject/holocubic_AIO_Frame.png)
 
@@ -187,6 +212,8 @@ platformIO模拟器 https://github.com/lvgl/lv_platformio
 
 lvgl的字体生成可以使用：`LvglFontTool V0.4` 已放置在Doc目录下
 
+c文件中提取所有汉字：可以使用工程下的`Script/get_font.py`脚本提取。`python get_font.py 字模.c文件的路径`
+
 ### 致谢
 * ESP32内存分布 https://blog.csdn.net/espressif/article/details/112956403
 * 视频播放 https://github.com/moononournation/RGB565_video
@@ -194,3 +221,4 @@ lvgl的字体生成可以使用：`LvglFontTool V0.4` 已放置在Doc目录下
 * ESP32 arduino运行双核 https://www.yiboard.com/thread-1344-1-1.html
 * 强制门户认证 https://blog.csdn.net/xh870189248/article/details/102892766
 * 感谢`lib`目录下所用到的开源库相关的作者
+
